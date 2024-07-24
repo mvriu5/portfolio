@@ -5,6 +5,7 @@ import React, {useState} from "react";
 import {ProjectView} from "@/components/views/ProjectView";
 import {ConnectView} from "@/components/views/ConnectView";
 import {AboutView} from "@/components/views/AboutView";
+import {Tags} from "lucide-react";
 
 type Page = "About" | "Components" | "Connect" | null;
 
@@ -16,17 +17,14 @@ export default function Home() {
 
         <div className={"flex flex-row justify-between items-center"}>
 
-            <div className={"flex flex-row items-center space-x-4"}>
-                <Image src={"/logo.drawio.png"}
-                       alt={"Logo"}
-                       width={24}
-                       height={24}
-                       onClick={() => setPage(null)}
-                       className={"opacity-80 cursor-pointer"}
-                />
+            <div className={"flex flex-row items-center space-x-4 cursor-pointer"} onClick={() => setPage(null)}>
+                <div className={"pr-3 py-1 border-2 border-y-0  border-l-0 border-r-zinc-300"}>
+                    <Tags size={28} className={"text-zinc-700"}/>
+
+                </div>
                 <div className={"flex flex-col space-y-0.5 font-medium"}>
                     <span className={"text-zinc-800 text-sm"}>Marius Ahsmus</span>
-                    <span className={"text-zinc-500 text-xs"}>Fullstack Engineer</span>
+                    <span className={"text-zinc-500 text-xs"}>Fullstack Software Engineer</span>
                 </div>
             </div>
 
