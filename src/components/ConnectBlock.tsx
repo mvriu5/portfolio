@@ -13,7 +13,7 @@ export const ConnectBlock: React.FC<ProjectBlockProps> = ({ title, icon, route, 
     const router = useRouter();
 
     return (
-        <div className={"w-max flex flex-row items-center space-x-2 rounded-lg hover:bg-zinc-100 p-2 pr-12 cursor-pointer"}
+        <div className={"w-max flex flex-row items-center space-x-4 rounded-lg hover:bg-zinc-100 p-2 pr-12 cursor-pointer"}
              onClick={() => router.push(route ?? "")}
         >
             {icon}

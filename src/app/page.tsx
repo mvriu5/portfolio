@@ -17,14 +17,20 @@ export default function Home() {
         <div className={"flex flex-row justify-between items-center"}>
 
             <div className={"flex flex-row items-center space-x-4"}>
-                <Image src={"/icon.png"} alt={"Logo"} width={40} height={40} onClick={() => setPage(null)}/>
-                <div className={"flex flex-col space-y-0.5"}>
-                    <span className={"text-zinc-700 text-sm font-medium"}>Marius Ahsmus</span>
-                    <span className={"text-zinc-600 text-xs font-normal"}>Fullstack Engineer</span>
+                <Image src={"/logo.drawio.png"}
+                       alt={"Logo"}
+                       width={24}
+                       height={24}
+                       onClick={() => setPage(null)}
+                       className={"opacity-80 cursor-pointer"}
+                />
+                <div className={"flex flex-col space-y-0.5 font-medium"}>
+                    <span className={"text-zinc-800 text-sm"}>Marius Ahsmus</span>
+                    <span className={"text-zinc-500 text-xs"}>Fullstack Engineer</span>
                 </div>
             </div>
 
-            <div className={"flex flex-row justify-end space-x-4 text-zinc-700"}>
+            <div className={"flex flex-row justify-end space-x-4 text-zinc-700 font-medium"}>
                 <span className={`${page === "About" ? "underline" : "hover:underline"} cursor-pointer`}
                       onClick={() => setPage("About")}
                 >
