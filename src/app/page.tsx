@@ -5,6 +5,7 @@ import {ProjectView} from "@/components/views/ProjectView";
 import {ConnectView} from "@/components/views/ConnectView";
 import {AboutView} from "@/components/views/AboutView";
 import {Tags} from "lucide-react";
+import {ComponentView} from "@/components/views/ComponentView";
 
 type Page = "About" | "Components" | "Connect" | null;
 
@@ -53,6 +54,7 @@ export default function Home() {
                 {!page && <ProjectView/>}
                 {page === "Connect" && <ConnectView/>}
                 {page === "About" && <AboutView/>}
+                {page === "Components" && <ComponentView/>}
             </div>
         </div>
   );

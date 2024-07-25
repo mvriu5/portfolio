@@ -9,7 +9,7 @@ export const ProjectView: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
     const projects = [
-        { key: 1, title: "fleur.app", description: "All-in-one solution for your workflow", job: "Frontend & Design" },
+        { key: 1, title: "fluer.app", description: "All-in-one solution for your workflow", job: "Frontend & Design" },
         { key: 2, title: "Components ✦", description: "Library of complex Components", job: "Frontend & Design" },
         { key: 3, title: "Project Title", description: "Project description", job: "Backend" }
     ];
