@@ -8,7 +8,7 @@ import {Github, Linkedin, Twitter} from "lucide-react";
 export const ConnectView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
 
     return (
-        <>
+        <div className={"space-y-2"}>
             <ConnectBlock title={"Github"}
                           icon={<Github className={"text-zinc-800"} size={14}/>}
             />
@@ -18,6 +18,6 @@ export const ConnectView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ classNam
             <ConnectBlock title={"LinkedIn"}
                           icon={<Linkedin className={"text-zinc-800"} size={14}/>}
             />
-        </>
+        </div>
     );
 }

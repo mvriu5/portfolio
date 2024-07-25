@@ -9,24 +9,26 @@ interface ProjectBlockProps {
     description: string;
     job: string;
     className?: string;
-    onClick?: () => void;
+    onMouseEnter?: () => void;
+    onMouseLeave?: () => void;
 }
 
-export const ProjectBlock: React.FC<ProjectBlockProps> = ({ title, description, job, className, onClick }) => {
+export const ProjectBlock: React.FC<ProjectBlockProps> = ({ title, description, job, onMouseEnter, onMouseLeave }) => {
 
     return (
         <motion.div
-            className={`group w-max flex flex-row justify-between items-center space-x-12 rounded-lg p-2 cursor-pointer font-medium ${className}`}
-            onClick={onClick}
+            className={"group w-max flex flex-row justify-between items-center space-x-12 rounded-lg p-2 cursor-pointer font-medium"}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
             initial={{background: "transparent", y: 0}}
-            whileHover={{background: "rgba(0, 0, 0, 0.1)", y: -5}}
+            whileHover={{background: "rgba(244, 244, 245)", y: -5}}
             transition={{duration: 0.3}}
         >
             <div className={"flex flex-col font-medium"}>
                 <span className={"text-sm text-zinc-800"}>{title}</span>
                 <span className={"text-xs text-zinc-500"}>{description + " • " + job}</span>
             </div>
-            <ChevronRight className={"invisible group-hover:visible text-zinc-500"}/>
+            <ChevronRight className={"invisible group-hover:visible text-zinc-300"}/>
         </motion.div>
     );
 };
