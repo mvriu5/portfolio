@@ -9,13 +9,18 @@ export const ProjectView: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
     const projects = [
-        { key: 1, title: "fluer.app", description: "All-in-one solution for your workflow", job: "Frontend & Design" },
-        { key: 2, title: "Components ✦", description: "Library of complex Components", job: "Frontend & Design" },
-        { key: 3, title: "Project Title", description: "Project description", job: "Backend" }
+        { key: 1, title: "fluer.app", description: "All-in-one solution for your workflow", job: "Frontend & Design", link: null},
+        { key: 2, title: "Griller ✦", description: "A React toast component", job: "Frontend & Design", link: "https://griller.ahsmus.com"},
+        { key: 3, title: "Project Title", description: "Project description", job: "Backend", link: null}
     ];
 
     return (
-        <div className={"flex flex-row justify-between"}>
+        <motion.div
+            initial={{opacity: 0, filter: 'blur(10px)', y: 50}}
+            animate={{opacity: 1, filter: 'blur(0px)', y: 0}}
+            transition={{duration: 0.65}}
+            className={"flex flex-row justify-between"}
+        >
             <div className={"space-y-2"}>
                 {projects.map((project) => (
                     <ProjectBlock
@@ -23,6 +28,9 @@ export const ProjectView: React.FC = () => {
                         description={project.description}
                         job={project.job}
                         className={selectedProject === project.key ? 'selected' : ''}
+                        onClick={() => {
+                            if (project.link) window.location.href = project.link;
+                        }}
                         onMouseEnter={() => setSelectedProject(project.key)}
                         onMouseLeave={() => setSelectedProject(null)}
                     />
@@ -44,7 +52,7 @@ export const ProjectView: React.FC = () => {
                 }
             </div>
 
-        </div>
+        </motion.div>
 
     );
 };

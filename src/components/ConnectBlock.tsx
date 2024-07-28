@@ -1,20 +1,17 @@
 "use client";
 
-import {useRouter} from "next/navigation";
 import React, {HTMLAttributes, ReactNode} from "react";
 
 interface ProjectBlockProps extends HTMLAttributes<HTMLDivElement> {
     title: string;
     icon: ReactNode;
-    route?: string;
+    onClick?: () => void;
 }
 
-export const ConnectBlock: React.FC<ProjectBlockProps> = ({ title, icon, route, className, ...props }) => {
-    const router = useRouter();
-
+export const ConnectBlock: React.FC<ProjectBlockProps> = ({ title, icon, onClick, className, ...props }) => {
     return (
         <div className={"w-max flex flex-row items-center space-x-4 rounded-lg hover:bg-zinc-100 p-2 pr-12 cursor-pointer"}
-             onClick={() => router.push(route ?? "")}
+             onClick={onClick}
         >
             {icon}
             <span className={"text-sm text-zinc-800"}>{title}</span>

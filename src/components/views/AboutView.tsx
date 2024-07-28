@@ -2,6 +2,7 @@
 
 import React, {HTMLAttributes, useState} from "react";
 import {SkillBadge} from "@/components/SkillBadge";
+import { motion } from "framer-motion";
 
 
 export const AboutView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
@@ -15,10 +16,25 @@ export const AboutView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ className,
     ];
 
     return (
-        <div className={"flex flex-row space-x-16 justify-between"}>
+        <motion.div
+            initial={{opacity: 0, filter: 'blur(10px)', y: 50}}
+            animate={{opacity: 1, filter: 'blur(0px)', y: 0}}
+            transition={{duration: 0.65}}
+            className="flex flex-row space-x-16 justify-between"
+        >
             <p className={"text-zinc-800 text-sm max-w-[70%] leading-8 text-pretty"}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+                dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+                luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
             </p>
 
             <div className="relative flex flex-col space-y-2">
@@ -31,6 +47,6 @@ export const AboutView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ className,
                     />
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 }

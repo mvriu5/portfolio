@@ -1,23 +1,25 @@
 "use client";
 
 import {motion} from "framer-motion";
-import React from "react";
+import React, {HTMLAttributes} from "react";
 import {ChevronRight} from "lucide-react";
 
-interface ProjectBlockProps {
+interface ProjectBlockProps extends HTMLAttributes<HTMLDivElement>{
     title: string;
     description: string;
     job: string;
     className?: string;
+    onClick?: () => void;
     onMouseEnter?: () => void;
     onMouseLeave?: () => void;
 }
 
-export const ProjectBlock: React.FC<ProjectBlockProps> = ({ title, description, job, onMouseEnter, onMouseLeave }) => {
+export const ProjectBlock: React.FC<ProjectBlockProps> = ({ title, description, job, onClick, onMouseEnter, onMouseLeave }) => {
 
     return (
         <motion.div
             className={"group w-max flex flex-row justify-between items-center space-x-12 rounded-lg p-2 cursor-pointer font-medium"}
+            onClick={onClick}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             initial={{background: "transparent", y: 0}}

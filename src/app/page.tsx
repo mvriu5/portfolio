@@ -5,19 +5,18 @@ import {ProjectView} from "@/components/views/ProjectView";
 import {ConnectView} from "@/components/views/ConnectView";
 import {AboutView} from "@/components/views/AboutView";
 import {Tags} from "lucide-react";
-import {ComponentView} from "@/components/views/ComponentView";
 
-type Page = "About" | "Components" | "Connect" | null;
+type Page = "About" | "Projects" | "Connect";
 
 export default function Home() {
-    const [page, setPage] = useState<Page>(null);
+    const [page, setPage] = useState<Page>("Projects");
 
     return (
         <div className={"flex flex-col space-y-4"}>
 
             <div className={"flex flex-row justify-between items-center"}>
 
-                <div className={"flex flex-row items-center space-x-4 cursor-pointer"} onClick={() => setPage(null)}>
+                <div className={"flex flex-row items-center space-x-4 cursor-pointer"} onClick={() => setPage("Projects")}>
                     <Tags size={28} className={"text-zinc-700"}/>
                     <div className={"flex flex-col space-y-0.5 font-medium"}>
                         <span className={"text-zinc-800 text-sm"}>Marius Ahsmus</span>
@@ -31,10 +30,10 @@ export default function Home() {
                     >
                         About
                     </span>
-                    <span className={`${page === "Components" ? "underline text-zinc-700" : "hover:underline"} cursor-pointer`}
-                          onClick={() => setPage("Components")}
+                    <span className={`${page === "Projects" ? "underline text-zinc-700" : "hover:underline"} cursor-pointer`}
+                          onClick={() => setPage("Projects")}
                     >
-                        Components
+                        Projects
                     </span>
                     <span className={`${page === "Connect" ? "underline text-zinc-700" : "hover:underline"} cursor-pointer`}
                           onClick={() => setPage("Connect")}
@@ -51,10 +50,9 @@ export default function Home() {
             </div>
 
             <div className={"flex flex-col space-y-4 pt-8"}>
-                {!page && <ProjectView/>}
+                {page === "Projects" && <ProjectView/>}
                 {page === "Connect" && <ConnectView/>}
                 {page === "About" && <AboutView/>}
-                {page === "Components" && <ComponentView/>}
             </div>
         </div>
   );
