@@ -13,7 +13,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className={"w-screen h-screen flex flex-col px-80 py-32 bg-white"}>
+        <div className={"w-screen h-max"}>
           {children}
         </div>
       </body>

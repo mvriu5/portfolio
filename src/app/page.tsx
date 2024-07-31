@@ -12,7 +12,7 @@ export default function Home() {
     const [page, setPage] = useState<Page>("Projects");
 
     return (
-        <div className={"flex flex-col space-y-4"}>
+        <div className={"flex flex-col space-y-4 xl:px-96 xl:py-32 lg:px-32 lg:py-16 md:px-16 md:py-8 sm:px-8 sm:py-4"}>
 
             <div className={"flex flex-row justify-between items-center"}>
 
@@ -24,7 +24,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className={"flex flex-row justify-end space-x-4 text-zinc-500 font-medium"}>
+                <div className={"flex flex-row justify-end space-x-4 text-sm text-zinc-500 font-medium"}>
                     <span className={`${page === "About" ? "underline text-zinc-700" : "hover:underline"} cursor-pointer`}
                           onClick={() => setPage("About")}
                     >
