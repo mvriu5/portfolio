@@ -37,7 +37,7 @@ export const ProjectView: React.FC = () => {
                 ))}
             </div>
 
-            <div>
+            <div className={"hidden lg:block"}>
                 {selectedProject === 1 &&
                     <motion.img
                         src="/fleur.png"

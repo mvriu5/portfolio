@@ -20,7 +20,7 @@ export const AboutView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ className,
             initial={{opacity: 0, filter: 'blur(10px)', y: 50}}
             animate={{opacity: 1, filter: 'blur(0px)', y: 0}}
             transition={{duration: 0.65}}
-            className="flex flex-row space-x-16 justify-between"
+            className="flex md:flex-row md:space-x-16 flex-col space-y-8 justify-between"
         >
             <p className={"text-zinc-800 text-sm max-w-[70%] leading-8 text-pretty"}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
@@ -37,7 +37,7 @@ export const AboutView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ className,
                 luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
             </p>
 
-            <div className="relative flex flex-col space-y-2">
+            <div className="w-max flex flex-col space-y-2">
                 {skills.map((skill) => (
                     <SkillBadge
                         title={skill.title}
