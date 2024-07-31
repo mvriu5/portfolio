@@ -24,6 +24,7 @@ export const ProjectView: React.FC = () => {
             <div className={"space-y-2"}>
                 {projects.map((project) => (
                     <ProjectBlock
+                        key={project.key}
                         title={project.title}
                         description={project.description}
                         job={project.job}
