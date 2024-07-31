@@ -40,6 +40,7 @@ export const AboutView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ className,
             <div className="relative flex flex-col space-y-2">
                 {skills.map((skill) => (
                     <SkillBadge
+                        key={skill.title}
                         title={skill.title}
                         points={skill.points}
                         onMouseEnter={() => setHovered(skill.title)}

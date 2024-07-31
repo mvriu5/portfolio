@@ -23,9 +23,11 @@ export const ConnectView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ classNam
             className={"space-y-2"}
         >
             {connections.map((conn) => (
-                <ConnectBlock title={conn.name}
-                              icon={conn.icon}
-                              onClick={() => window.location.href = conn.link}
+                <ConnectBlock
+                    key={conn.name}
+                    title={conn.name}
+                    icon={conn.icon}
+                    onClick={() => window.location.href = conn.link}
                 />
             ))}
         </motion.div>
