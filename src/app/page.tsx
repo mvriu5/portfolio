@@ -20,7 +20,7 @@ export default function Home() {
                     <Tags size={28} className={"text-zinc-700"}/>
                     <div className={"flex flex-col space-y-0.5 font-medium"}>
                         <span className={"text-zinc-800 text-sm"}>Marius Ahsmus</span>
-                        <span className={"text-zinc-500 text-xs"}>Fullstack Software Engineer</span>
+                        <span className={"hidden sm:block text-zinc-500 text-xs"}>Fullstack Software Engineer</span>
                     </div>
                 </div>
 

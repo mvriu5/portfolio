@@ -24,6 +24,7 @@ export const ProjectBlock: React.FC<ProjectBlockProps> = ({ title, description, 
             onMouseLeave={onMouseLeave}
             initial={{background: "transparent", y: 0}}
             whileHover={{background: "rgba(244, 244, 245)", y: -5}}
+            whileTap={{background: "rgba(244, 244, 245)", y: -5}}
             transition={{duration: 0.3}}
         >
             <div className={"flex flex-col font-medium"}>
