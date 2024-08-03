@@ -11,7 +11,7 @@ export const ConnectView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ classNam
     const connections = [
         {name: "Github", icon: <Github className={"text-zinc-800"} size={14}/>, link: "https://github.com/mvriu5"},
         {name: "Twitter", icon: <Twitter className={"text-zinc-800"} size={14}/>, link: "https://x.com/mvriu5"},
-        {name: "LinkedIn", icon: <Linkedin className={"text-zinc-800"} size={14}/>, link: "https://linkedin.com/mvriu5"}
+        {name: "LinkedIn", icon: <Linkedin className={"text-zinc-800"} size={14}/>, link: "https://www.linkedin.com/in/marius-ahsmus-991135209"}
     ]
 
 

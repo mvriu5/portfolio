@@ -9,10 +9,10 @@ export const AboutView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ className,
     const [hovered, setHovered] = useState<string |null>(null);
 
     const skills = [
-        { title: "Java", points: "87" },
-        { title: "Typescript", points: "53" },
-        { title: "React", points: "60" },
-        { title: "Python", points: "95" }
+        { title: "Java", points: "80" },
+        { title: "Typescript", points: "78" },
+        { title: "React", points: "71" },
+        { title: "C#", points: "85" }
     ];
 
     return (
@@ -20,23 +20,11 @@ export const AboutView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ className,
             initial={{opacity: 0, filter: 'blur(10px)', y: 50}}
             animate={{opacity: 1, filter: 'blur(0px)', y: 0}}
             transition={{duration: 0.65}}
-            className="flex md:flex-row md:space-x-16 flex-col space-y-8 justify-between"
+            className="flex md:flex-row md:space-x-16 md:space-y-0 flex-col space-y-8 justify-between"
         >
             <p className={"text-zinc-800 text-sm max-w-[70%] leading-8 text-pretty"}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
-                luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+                Hello! My name is Marius, and I am a dedicated software developer with a passion for creating innovative and efficient solutions. With a strong foundation in Java and C#, I have developed a keen ability to turn complex problems into streamlined, user-friendly applications. Currently, I am pursuing my bachelor's degree, with an expected graduation in 2026. In my free time, I have recently delved into frontend programming with TypeScript, Next.js, and Tailwind CSS.
             </p>
-
             <div className="w-max flex flex-col space-y-2">
                 {skills.map((skill) => (
                     <SkillBadge
