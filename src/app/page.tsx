@@ -24,7 +24,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className={"flex flex-row justify-end space-x-2 md:space-x-4 text-zinc-500 font-medium"}>
+                <div className={"flex flex-row justify-end space-x-2 md:space-x-4 text-zinc-500 font-normal"}>
                     <span className={`${page === "About" ? "underline text-zinc-700" : "hover:underline"} cursor-pointer`}
                           onClick={() => setPage("About")}
                     >
