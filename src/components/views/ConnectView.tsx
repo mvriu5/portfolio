@@ -17,9 +17,9 @@ export const ConnectView: React.FC<HTMLAttributes<HTMLDivElement>> = ({ classNam
 
     return (
         <motion.div
-            initial={{opacity: 0, filter: 'blur(10px)', y: 50}}
+            initial={{opacity: 0, filter: 'blur(10px)', y: 100}}
             animate={{opacity: 1, filter: 'blur(0px)', y: 0}}
-            transition={{duration: 0.65}}
+            transition={{duration: 1}}
             className={"space-y-2"}
         >
             {connections.map((conn) => (
