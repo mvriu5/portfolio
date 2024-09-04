@@ -12,6 +12,7 @@ export const ProjectView: React.FC = () => {
     const projects = [
         { key: 1, title: "calla.so", description: "All-in-one solution to upgrade a teams workflow", job: "Frontend & Design", link: null},
         { key: 2, title: "Griller ✦", description: "A React toast component", job: "Frontend & Design", link: "https://griller.ahsmus.com"},
+        { key: 3, title: "Explorations ✈", description: "Some React component explorations", job: "Frontend & Design", link: "https://explorations.ahsmus.com"},
     ];
 
     return (
